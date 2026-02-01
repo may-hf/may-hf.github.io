@@ -87,30 +87,25 @@ nav{
 }
 
 
- /* --- SNS icons --- */
+/* --- SNS image icons --- */
 .sns{
   margin-top: 18px;
   display: flex;
-  gap: 14px;
+  gap: 20px;
   align-items: center;
 }
 
-.sns-icon{
-  width: 64px;
-  height: 64px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #111;
-  border-radius: 999px;
-  color: #111;
+.sns-img{
+  width: 56px;     
+  height: 56px;
   opacity: 0.85;
 }
 
-.sns-icon:hover{
+.sns-img:hover{
   opacity: 1;
-  text-decoration: none;
 }
+
+
 
 
 /* --- Gallery --- */
