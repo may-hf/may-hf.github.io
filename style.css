@@ -1,0 +1,146 @@
+/* --- Base --- */
+:root{ --max: 980px; }
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #111;
+  background: #fff;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* --- Layout --- */
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.brand{
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+nav{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* --- Language switch --- */
+.lang{
+  margin-left: 6px;
+  padding: 6px 10px;
+  border: 1px solid #111;
+  border-radius: 999px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.lang:hover{
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* --- Hero --- */
+.hero{
+  margin: 32px 0 48px;
+}
+
+.hero h1{
+  font-size: 44px;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+}
+
+.hero p{
+  margin: 0;
+  max-width: 60ch;
+  opacity: 0.85;
+}
+
+/* --- Button --- */
+.button{
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 14px;
+  border: 1px solid #111;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* --- Gallery --- */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card{
+  border: 1px solid #f0f0f0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption{
+  padding: 10px 12px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* --- Footer --- */
+footer{
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* --- Text blocks --- */
+.section-title{
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+.prose{
+  max-width: 70ch;
+}
+
+.prose p{ margin: 0 0 14px; }
+
+/* --- Responsive --- */
+@media (max-width: 900px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+  .hero h1{ font-size: 36px; }
+}
+
+@media (max-width: 520px){
+  header{ flex-direction: column; align-items: flex-start; }
+  .grid{ grid-template-columns: 1fr; }
+  .hero h1{ font-size: 30px; }
+}
