@@ -96,10 +96,12 @@ nav{
 }
 
 .sns-img{
-  width: 16px;     
-  height: 16px;
-  opacity: 0.85;
+  max-width: 36px;
+  max-height: 36px;
+  width: 36px;
+  height: 36px;
 }
+
 
 .sns-img:hover{
   opacity: 1;
