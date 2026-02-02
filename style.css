@@ -151,13 +151,16 @@ footer{
   border-top: 1px solid #eee;
   font-size: 12px;
   opacity: 0.75;
+   text-align: center;
 }
 
 footer .sns{
   margin: 0 0 12px;
   display: flex;
+  justify-content: center; 
   gap: 16px;
   align-items: center;
+  margin: 0 0 12px;
 }
 
 /* --- Text blocks --- */
