@@ -155,12 +155,11 @@ footer{
 }
 
 footer .sns{
-  margin: 0 0 12px;
+  width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 16px;
   align-items: center;
-  margin: 0 0 12px;
 }
 
 /* --- Text blocks --- */
