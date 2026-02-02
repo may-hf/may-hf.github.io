@@ -153,6 +153,13 @@ footer{
   opacity: 0.75;
 }
 
+footer .sns{
+  margin: 0 0 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
 /* --- Text blocks --- */
 .section-title{
   font-size: 18px;
