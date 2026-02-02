@@ -217,3 +217,23 @@ footer .sns{
 @media (max-width: 767px){
   .zoomable{ cursor: default; }
 }
+
+/* --- Navigation active state --- */
+nav a{
+  position: relative;
+}
+
+nav a.active{
+  font-weight: 600;          /* 太字 */
+  opacity: 1;
+}
+
+nav a.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: #111;
+}
