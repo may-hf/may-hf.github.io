@@ -184,3 +184,36 @@ footer .sns{
   .hero h1{ font-size: 30px; }
 }
 
+/* --- Lightbox (image zoom) --- */
+.zoomable{
+  cursor: zoom-in;
+}
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 2000;
+}
+
+.lightbox.open{
+  display: flex;
+}
+
+.lightbox img{
+  max-width: min(1100px, 92vw);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  cursor: zoom-out;
+}
+
+/* スマホではズームしない（任意：見た目も通常に） */
+@media (max-width: 767px){
+  .zoomable{ cursor: default; }
+}
