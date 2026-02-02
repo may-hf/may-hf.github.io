@@ -238,20 +238,29 @@ nav a.active::after{
   background: #111;
 }
 
-/* --- Mobile: fix header overlap --- */
+/* --- Mobile: compact header --- */
 @media (max-width: 520px){
   header{
-    padding: 12px 16px;
-    gap: 10px;
+    padding: 8px 12px;      /* 余白を減らす */
+    gap: 8px;
+  }
+
+  .brand{
+    font-size: 18px;        /* 名前を少し小さく（任意） */
   }
 
   nav{
-    gap: 12px;
-    font-size: 13px;
+    gap: 10px;              /* リンク間隔を詰める */
+    font-size: 12px;        /* 文字サイズを小さく */
   }
 
-  /* 本文をヘッダー分だけ下げる（ここが重要） */
+  .lang{
+    padding: 4px 8px;       /* EN/JPボタンも圧縮 */
+    font-size: 11px;
+  }
+
+  /* 本文の押し下げも小さめに再調整 */
   .container{
-    padding-top: 160px;
+    padding-top: 120px;     /* まだ被るなら 130〜150 に */
   }
 }
