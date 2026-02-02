@@ -151,16 +151,22 @@ footer{
   border-top: 1px solid #eee;
   font-size: 12px;
   opacity: 0.75;
-   text-align: center;
+
+  /* ここが重要 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ← 横方向を中央 */
+  gap: 12px;               /* SNS と © の間隔 */
 }
 
+/* SNS icons */
 footer .sns{
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: 16px;
   align-items: center;
 }
+
 
 /* --- Text blocks --- */
 .section-title{
