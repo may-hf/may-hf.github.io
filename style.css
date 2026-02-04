@@ -1,7 +1,11 @@
 /* --- Base --- */
-:root{ --max: 980px; }
+:root{
+  --max: 980px;
+}
 
-*{ box-sizing: border-box; }
+*{
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
@@ -11,16 +15,23 @@ body{
   background: #fff;
 }
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: underline; }
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
 
 /* --- Layout --- */
 .container{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 110px 20px 56px;
+  padding: 110px 20px 56px; /* header fixed の押し下げ */
 }
 
+/* --- Header (fixed) --- */
 header{
   position: fixed;
   top: 0;
@@ -29,14 +40,14 @@ header{
 
   background: #fff;
   z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
+
   padding: 18px 20px;
   border-bottom: 1px solid #eee;
- margin-bottom: 0;
-  padding-bottom: 18px;
 }
 
 .brand{
@@ -50,6 +61,26 @@ nav{
   flex-wrap: wrap;
   font-size: 14px;
   opacity: 0.9;
+}
+
+/* --- Navigation active state --- */
+nav a{
+  position: relative;
+}
+
+nav a.active{
+  font-weight: 600;
+  opacity: 1;
+}
+
+nav a.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: #111;
 }
 
 /* --- Language switch --- */
@@ -69,7 +100,7 @@ nav{
 
 /* --- Hero --- */
 .hero{
-  margin: 32px 0 48px;
+  margin: 0 0 48px; /* ← 方法A：上の余白を0にして他ページと揃える */
 }
 
 .hero h1{
@@ -94,7 +125,6 @@ nav{
   font-size: 14px;
 }
 
-
 /* --- SNS image icons --- */
 .sns{
   margin-top: 18px;
@@ -103,6 +133,7 @@ nav{
   align-items: center;
 }
 
+/* 応急処置（全体img指定と競合していたため） */
 .sns img{
   width: 36px !important;
   height: 36px !important;
@@ -110,13 +141,9 @@ nav{
   max-height: 36px !important;
 }
 
-
 .sns-img:hover{
   opacity: 1;
 }
-
-
-
 
 /* --- Gallery --- */
 .grid{
@@ -144,30 +171,6 @@ nav{
   opacity: 0.85;
 }
 
-/* --- Footer --- */
-footer{
-  margin-top: 60px;
-  padding-top: 18px;
-  border-top: 1px solid #eee;
-  font-size: 12px;
-  opacity: 0.75;
-
-  /* ここが重要 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* ← 横方向を中央 */
-  gap: 12px;               /* SNS と © の間隔 */
-}
-
-/* SNS icons */
-footer .sns{
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  align-items: center;
-}
-
-
 /* --- Text blocks --- */
 .section-title{
   font-size: 18px;
@@ -178,18 +181,29 @@ footer .sns{
   max-width: 70ch;
 }
 
-.prose p{ margin: 0 0 14px; }
-
-/* --- Responsive --- */
-@media (max-width: 900px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-  .hero h1{ font-size: 36px; }
+.prose p{
+  margin: 0 0 14px;
 }
 
-@media (max-width: 520px){
-  header{ flex-direction: column; align-items: flex-start; }
-  .grid{ grid-template-columns: 1fr; }
-  .hero h1{ font-size: 30px; }
+/* --- Footer --- */
+footer{
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  opacity: 0.75;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .sns{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
 }
 
 /* --- Lightbox (image zoom) --- */
@@ -221,54 +235,57 @@ footer .sns{
   cursor: zoom-out;
 }
 
-/* スマホではズームしない（任意：見た目も通常に） */
+/* --- Responsive --- */
+@media (max-width: 900px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1{
+    font-size: 36px;
+  }
+}
+
+/* スマホではズームしない */
 @media (max-width: 767px){
-  .zoomable{ cursor: default; }
-}
-
-/* --- Navigation active state --- */
-nav a{
-  position: relative;
-}
-
-nav a.active{
-  font-weight: 600;          /* 太字 */
-  opacity: 1;
-}
-
-nav a.active::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 1px;
-  background: #111;
+  .zoomable{
+    cursor: default;
+  }
 }
 
 /* --- Mobile: compact header --- */
 @media (max-width: 520px){
   header{
-    padding: 8px 12px;      /* 余白を減らす */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
     gap: 8px;
   }
 
   .brand{
-    font-size: 18px;        /* 名前を少し小さく（任意） */
+    font-size: 18px;
   }
 
   nav{
-    gap: 10px;              /* リンク間隔を詰める */
-    font-size: 12px;        /* 文字サイズを小さく */
+    gap: 10px;
+    font-size: 12px;
   }
 
   .lang{
-    padding: 4px 8px;       /* EN/JPボタンも圧縮 */
+    padding: 4px 8px;
     font-size: 11px;
   }
 
-  /* 本文の押し下げも小さめに再調整 */
+  .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1{
+    font-size: 30px;
+  }
+
+  /* 本文の押し下げ（被るなら 130〜150 に上げる） */
   .container{
-    padding-top: 120px;     /* まだ被るなら 130〜150 に */
+    padding-top: 120px;
   }
 }
