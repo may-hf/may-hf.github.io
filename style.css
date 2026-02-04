@@ -286,6 +286,6 @@ footer .sns{
 
   /* 本文の押し下げ（被るなら 130〜150 に上げる） */
   .container{
-    padding-top: 120px;
+    padding-top: 130px;
   }
 }
