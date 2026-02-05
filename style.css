@@ -305,3 +305,6 @@ footer .sns{
   align-items: start;    /* ← 追加：上揃え（伸びない） */
 }
 
+.card{
+  overflow: visible; /* 切らない */
+}
