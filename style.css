@@ -150,12 +150,15 @@ nav a.active::after{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+
+  grid-auto-rows: auto;
+  align-items: start;
 }
 
 .card{
   border: 1px solid #f0f0f0;
   border-radius: 14px;
-  overflow: hidden;
+  overflow: visible;
   background: #fff;
 }
 
@@ -163,6 +166,7 @@ nav a.active::after{
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 14px
 }
 
 .caption{
@@ -290,11 +294,7 @@ footer .sns{
   }
 }
 
-.card img{
-  width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-}
+
 
 .grid{
   display: grid;
@@ -305,6 +305,3 @@ footer .sns{
   align-items: start;    /* ← 追加：上揃え（伸びない） */
 }
 
-.card{
-  overflow: visible; /* 切らない */
-}
