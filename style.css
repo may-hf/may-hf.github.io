@@ -295,3 +295,13 @@ footer .sns{
   height: auto !important;
   object-fit: contain !important;
 }
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  grid-auto-rows: auto;  /* ← 追加：行の高さを内容に合わせる */
+  align-items: start;    /* ← 追加：上揃え（伸びない） */
+}
+
