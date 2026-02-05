@@ -289,3 +289,9 @@ footer .sns{
     padding-top: 130px;
   }
 }
+
+.card img{
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
