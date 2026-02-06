@@ -329,3 +329,14 @@ footer .sns{
   }
 }
 
+.sns-text{
+  margin-top: 18px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #555;
+}
+
+.sns-text p{
+  margin: 4px 0;
+}
