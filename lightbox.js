@@ -3,28 +3,32 @@
   const lightImg = document.getElementById("lightboxImg");
   if (!box || !lightImg) return;
 
-  // 開く
-  document.querySelectorAll("img.zoomable").forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      lightImg.src = thumb.src;
-      box.classList.add("open");
-      box.setAttribute("aria-hidden", "false");
-    });
-  });
+  function open(src, alt) {
+    lightImg.src = src;
+    lightImg.alt = alt || "";
+    box.classList.add("open");
+    box.setAttribute("aria-hidden", "false");
+  }
 
-  // 閉じる（背景タップ）
-  box.addEventListener("click", () => {
+  function close() {
     box.classList.remove("open");
     box.setAttribute("aria-hidden", "true");
     lightImg.src = "";
+    lightImg.alt = "";
+  }
+
+  // サムネ（作品画像）をクリックで開く
+  document.querySelectorAll("img.zoomable").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      open(thumb.src, thumb.alt);
+    });
   });
 
-  // 閉じる（Esc）
+  // 背景クリックで閉じる
+  box.addEventListener("click", close);
+
+  // Escで閉じる（PC）
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && box.classList.contains("open")) {
-      box.classList.remove("open");
-      box.setAttribute("aria-hidden", "true");
-      lightImg.src = "";
-    }
+    if (e.key === "Escape" && box.classList.contains("open")) close();
   });
 })();
