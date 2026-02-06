@@ -256,12 +256,6 @@ footer .sns-text{
   }
 }
 
-/* スマホではズームしない */
-@media (max-width: 767px){
-  .zoomable{
-    cursor: default;
-  }
-}
 
 /* --- Mobile: compact header --- */
 @media (max-width: 520px){
