@@ -376,3 +376,14 @@ footer .sns-text{
   letter-spacing: 0.04em;
   opacity: 0.85;
 }
+
+.hero.full{
+  width: 100%;
+  background: #fff; /* 任意 */
+}
+
+.hero.full .hero-inner{
+  max-width: 980px;   /* containerと同じ幅 */
+  margin: 0 auto;
+  padding: 110px 20px 56px;
+}
