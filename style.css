@@ -112,7 +112,7 @@ nav a.active::after{
 
 .hero p{
   margin: 0;
-  max-width: 60ch;
+  max-width: none;
   opacity: 0.85;
 }
 
