@@ -208,6 +208,12 @@ footer .sns{
   justify-content: center;
   gap: 16px;
   align-items: center;
+margin: 0;  
+}
+
+
+footer .sns-text{
+  margin-top: 4px;      
 }
 
 /* --- Lightbox (image zoom) --- */
