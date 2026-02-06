@@ -318,3 +318,14 @@ footer .sns{
   display: block;
 }
 
+/* --- Hero spacer (keep layout without titles) --- */
+.hero-spacer{
+  height: 54px;  /* ← ここが「h1の高さ」相当。好みで調整 */
+}
+
+@media (max-width: 520px){
+  .hero-spacer{
+    height: 38px;
+  }
+}
+
