@@ -340,3 +340,38 @@ footer .sns-text{
 .sns-text p{
   margin: 4px 0;
 }
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.lightbox.open{
+  display: flex;
+}
+
+.lightbox-content{
+  text-align: center;
+  max-width: 95vw;
+}
+
+.lightbox img{
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.lightbox-caption{
+  margin-top: 14px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
