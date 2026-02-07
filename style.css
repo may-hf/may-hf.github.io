@@ -435,3 +435,23 @@ footer .sns-text{
   visibility: visible;
   transform: translateY(0);
 }
+
+.all-works-cta{
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.all-works-btn{
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #111;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.all-works-btn:hover{
+  opacity: 0.75;
+}
