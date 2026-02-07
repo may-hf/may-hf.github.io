@@ -47,19 +47,19 @@
   });
 })();
 
-const toTopBtn = document.getElementById("toTop");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("toTop");
+  if (!btn) return;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    toTopBtn.style.display = "block";
-  } else {
-    toTopBtn.style.display = "none";
+  function toggle() {
+    if (window.scrollY > 300) btn.classList.add("show");
+    else btn.classList.remove("show");
   }
-});
 
-toTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle(); // 読み込み直後にも判定
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
