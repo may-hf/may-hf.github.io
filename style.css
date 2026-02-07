@@ -406,6 +406,29 @@ footer .sns-text{
   transform: translateY(6px);
   transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
 }
+.past-cta-section{
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+
+
+.past-cta-btn{
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #111;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.past-cta-btn:hover{
+  text-decoration: none;
+  opacity: 0.75;
+}
+
 
 .to-top.show{
   opacity: 1;
