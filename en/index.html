@@ -21,45 +21,83 @@
       </nav>
     </header>
 
+   
+  <main class="container">
+    <!-- Home は hero が最初 -->
     <section class="hero">
-      <h1>Maze Artist</h1>
-      <p>Short artist statement in English.</p>
-
-     
-
+      <div class="hero-spacer" aria-hidden="true"></div>
+      <p>
+       I draw intricate mazes by hand, based on mathematical formulas and patterns that attract me.
+      </p>
 
       
     </section>
 
-    <section class="grid">
+    <section class="grid grid-crop">
       <div class="card">
-        <img src="../images/work1.jpg" alt="Work 1">
-        <div class="caption">Title / Year / Medium</div>
+        <img class="zoomable" src="../image/s014_20221105_122428_163 (2).jpg" alt="x=sin3t+3cos7t,y=3sin7t+cos3t. x=sin3t+2cos7t,y=2sin7t+cos3t. #014 expanded version">
+      </div>
+
+       <div class="card">
+        <img class="zoomable" src="../image/s022_20250317233342_001-EDIT.jpg" alt="Truchet tiling #022 expanded version">
+       </div>
+
+      <div class="card">
+        <img class="zoomable" src="../image/s007_20220326114518_001~3.jpg" alt="x=4sin7t+3cos2t,y=3sin2t+4cos7t. #007 expanded version">
+      </div>
+      
+      <div class="card">
+        <img class="zoomable" src="../image/s017_20230822090029_001~4.jpg" alt="Penrose tilling #017 expanded version">
       </div>
 
       <div class="card">
-        <img src="../images/work2.jpg" alt="Work 2">
-        <div class="caption">Title / Year / Medium</div>
+        <img class="zoomable" src="../image/s026_20251012213845_001-EDIT.jpg" alt="x=9sin3t+3cos7t,y=3sin7t-9cos3t. x=8sin3t+3cos7t,y=3sin7t-8cos3t. x=2sin3t+3cos7t,y=3sin7t-2cos3t. #026 expanded">
       </div>
 
       <div class="card">
-        <img src="../images/work3.jpg" alt="Work 3">
-        <div class="caption">Title / Year / Medium</div>
+        <img class="zoomable" src="../image/s008_20220410213223_001~3 (1).jpg" alt="Shippou-tsunagi #008 expanded version">
       </div>
+
+     
     </section>
 
+    <section class="all-works-cta">
+  <a class="all-works-btn" href="works.html">
+    View All Works
+  </a>
+</section>
+
     <footer>
-       <div class="sns">
-  <a href="https://www.instagram.com/meiromazeho" target="_blank" rel="noopener">
+      <div class="sns">
+  <a href="https://instagram.com/meiromazeho" target="_blank" rel="noopener">
     <img class="sns-img" src="../image/Instagram_Glyph_Black.jpg" alt="Instagram">
   </a>
 
-  <a href="https://twitter.com/meiromerirofono" target="_blank" rel="noopener">
+  <a href="https://twitter.com/meiromeirofono" target="_blank" rel="noopener">
     <img class="sns-img" src="../image/logo-black.png" alt="X">
   </a>
 </div>
-      © May
+
+<div class="sns-text">
+  <p>Instagram: @meiromazeho</p>
+  <p>X (Twitter): @meiromeirofono</p>
+</div>
+      © May HF
     </footer>
   </div>
+    <!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-content">
+  <img id="lightboxImg" alt="">
+   <p id="lightboxCaption" class="lightbox-caption"></p>  
+</div>
+  </div>
+
+<script src="lightbox.js"></script>
+
+    <button id="toTop" class="to-top" aria-label="Back to top">
+  ↑
+</button>
+
 </body>
 </html>
